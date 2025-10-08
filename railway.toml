@@ -2,7 +2,7 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "java -Dserver.port=$PORT -jar target/*.jar"
+startCommand = "java -Dserver.port=$PORT -Dserver.address=0.0.0.0 -jar target/*.jar"
 healthcheckPath = "/eazystore/actuator/health"
 healthcheckTimeout = 300
 restartPolicyType = "on_failure"
